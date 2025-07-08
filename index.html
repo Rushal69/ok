@@ -185,7 +185,7 @@
 
             
             <div class="service-container">
-              <h4>our services</h4>
+              <h4>Founded By RUSHAL</h4>
               <div class="service-card">
                 <img src="images/digital-strategy.png">
                 <div class="service-card-header">
@@ -202,37 +202,37 @@
            <div class="service-card">
               <img src="images/web-dev.png" alt="">
               <div class="service-card-header">
-                <h1>Web development</h1>
+                <h1> Career Support</h1>
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 28C13.7631 18.2369 29 3 29 3M29 3H6.5M29 3V25.5" stroke="white" stroke-width="5" stroke-linecap="square"></path>
                   </svg>
                 </div>
 
-                 <p class="definition">We build websites that not only look great but also function seamlessly, ensuring they meet your business needs and goals.</p>
+                 <p class="definition"> Templates and trackers for resumes, internships, SOPs, and interview prep..</p>
           </div>
 
           <div class="service-card">
             <img src="images/ui-design.png" alt="">
             <div class="service-card-header">
-              <h1>UI design</h1>
+              <h1> Doubt Solving Help </h1>
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 28C13.7631 18.2369 29 3 29 3M29 3H6.5M29 3V25.5" stroke="white" stroke-width="5" stroke-linecap="square"></path>
                 </svg>          
               </div>
 
-               <p class="definition">We design user interfaces that make it easy and enjoyable for your visitors to interact with your site or app.</p>
+               <p class="definition"> Ask us anything — career, academics, or personal issues.You’ll get personalized replies within 48 hours..</p>
       </div>
 
         <div class="service-card elemlast">
           <img src="images/ongoing-support.png" alt="">
           <div class="service-card-header">
-            <h1>Ongoing support</h1>
+            <h1>Tool Library</h1>
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 28C13.7631 18.2369 29 3 29 3M29 3H6.5M29 3V25.5" stroke="white" stroke-width="5" stroke-linecap="square"></path>
               </svg>             
             </div>
 
-             <p class="definition">We've got your back with ongoing support, keeping everything running smoothly, secure, and up-to-date as your business evolves.</p>
+             <p class="definition">Curated Notion templates: goal tracker, vision board, exam prep, money tracker. Updated regularly with new drops.</p>
   </div>
  
 
@@ -246,7 +246,8 @@
 
               <div class="approach-content">
               <p>
-                At Versico, we believe that good ideas come from working together. We start by listening to you and understanding what you want. This helps us mix your ideas with our skills to create something special. We are flexible, so if new ideas come up or challenges happen, we can change our plans to get the best results.
+               At Versico, we design quiet, intentional spaces for people building something of their own. Whether you're a student juggling deadlines or a creator shaping your next big idea, our tools are built to clear noise—not add to it.
+We start by understanding your flow, then craft simple systems that feel natural to use. From daily dashboards to long-term support, everything we build is made to help you focus, grow, and breathe a little easier.
 
               </p>
 
@@ -254,9 +255,7 @@
                 Quality matters to us, and we pay attention to every detail to make your project shine. Our goal is to not just meet your needs but to go beyond them. Let's work together to make your vision a reality!
               </p>
               
-              <p>
-                So before we take action, <a href="mailto:ruv@versico.in">let's get to know each other!</a>
-              </p>
+             
 
               </div>
 
@@ -665,7 +664,9 @@
 
     <script type="module" src="js/index.js"></script>
     <script type="module" src="js/animation.js"></script>
-    
+   <style>
+  .service-card img { display: none !important; }
+</style>
 
 
 
@@ -674,4 +675,8 @@
 
 
 
+
+  <script>
+  document.querySelectorAll(".service-card").forEach(el => el.onmousemove = el.onmouseenter = el.onmouseleave = null);
+</script>
 </body></html>
