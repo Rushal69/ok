@@ -1,6 +1,6 @@
 const faqs = [
     // General Questions
-    { category: 'general', question: 'How do I get started with a project?', answer: 'It\'s easy! Just send us a message at dhruv@versico.in. Let us know what you need, and we can discuss your project in detail.' },
+    { category: 'general', question: 'How do I get started with a project?', answer: 'It\'s easy! Just send us a message at rushal111r@gmail.com. Let us know what you need, and we can discuss your project in detail.' },
     { category: 'general', question: 'How long does a project usually take?', answer: 'The timeline depends on the scope of the project. Typically, a project can take anywhere from a few weeks to a few months.' },
     { category: 'general', question: 'What do you need from me to get started?', answer: 'We need a clear brief of what you want to achieve, along with any content and images you want to include on the site.' },
     { category: 'general', question: 'Do you provide ongoing support after the project?', answer: 'Yes, we offer continuous support, maintenance, and updates for your website to ensure it keeps running smoothly.' },
