@@ -480,7 +480,7 @@ if (hasMouse) {
       if (elem.querySelector(".definition").style.display !== "block") {
         gsap.to(image, {
           opacity: 0,
-          ease: Power3,
+          ease: "power3.out",
           duration: 0.5,
         });
       }
@@ -501,7 +501,7 @@ if (hasMouse) {
 
         gsap.to(image, {
           opacity: 1,
-          ease: Power3,
+          ease: "power3.out",
           top: diff,
           left: dets.clientX,
           rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
@@ -519,7 +519,7 @@ if (hasMouse) {
         if (currentHoveredCard.querySelector(".definition").style.display !== "block") {
           gsap.to(prevImage, {
             opacity: 0,
-            ease: Power3,
+            ease: "power3.out",
             duration: 0.5,
           });
         }
@@ -529,7 +529,7 @@ if (hasMouse) {
       if (definition.style.display !== "block") {
         gsap.to(image, {
           opacity: 1,
-          ease: Power3,
+          ease: "power3.out",
           duration: 0.5,
         });
         image.style.display = "block"; // Ensure the image is visible
@@ -555,7 +555,7 @@ if (hasMouse) {
           opacity: 0,
           height: 0,
           duration: 0.5,
-          ease: Power3,
+          ease: "power3.out",
           onComplete: () => {
             definition.style.display = "none"; // Set display to none after animation is complete
           }
@@ -564,7 +564,7 @@ if (hasMouse) {
         // Show the image again smoothly when definition is hidden
         gsap.to(image, {
           opacity: 1,
-          ease: Power3,
+          ease: "power3.out",
           duration: 0.5,
           display: "block",  // Ensure it's visible
         });
@@ -575,7 +575,7 @@ if (hasMouse) {
             opacity: 0,
             height: 0,
             duration: 0.5,
-            ease: Power3,
+            ease: "power3.out",
             onComplete: () => {
               def.style.display = "none"; // Ensure all definitions are hidden
             }
@@ -587,14 +587,14 @@ if (hasMouse) {
           opacity: 1,
           height: "auto",  // Automatically adjust height as per content
           duration: 0.5,
-          ease: Power3,
+          ease: "power3.out",
           display: "block",  // Ensure it's visible
         });
 
         // Hide the moving image smoothly when definition is visible for the current card
         gsap.to(image, {
           opacity: 0,
-          ease: Power3,
+          ease: "power3.out",
           duration: 0.5,
           onComplete: () => {
             // Set display to 'none' after opacity transition for smooth hiding
@@ -616,7 +616,7 @@ if (hasMouse) {
         if (elem.querySelector(".definition").style.display !== "block") {
           gsap.to(image, {
             opacity: 0,
-            ease: Power3,
+            ease: "power3.out",
             duration: 0.5,
           });
         }
@@ -645,7 +645,7 @@ else {
           opacity: 0,
           height: 0,
           duration: 0.5,
-          ease: Power3,
+          ease: "power3.out",
           onComplete: () => {
             definition.style.display = "none"; // Set display to none after animation is complete
           }
@@ -654,7 +654,7 @@ else {
         // Ensure the image is hidden when definition is closed on touch devices
         gsap.to(image, {
           opacity: 0,
-          ease: Power3,
+          ease: "power3.out",
           duration: 0.5,
           display: "none", // Explicitly hide the image
         });
@@ -665,7 +665,7 @@ else {
             opacity: 0,
             height: 0,
             duration: 0.5,
-            ease: Power3,
+            ease: "power3.out",
             onComplete: () => {
               def.style.display = "none"; // Ensure all definitions are hidden
             }
@@ -677,14 +677,14 @@ else {
           opacity: 1,
           height: "auto",  // Automatically adjust height as per content
           duration: 0.5,
-          ease: Power3,
+          ease: "power3.out",
           display: "block",  // Ensure it's visible
         });
 
         // Ensure the image is hidden while the definition is visible
         gsap.to(image, {
           opacity: 0,
-          ease: Power3,
+          ease: "power3.out",
           duration: 0.5,
           display: "none", // Explicitly hide the image
         });
@@ -702,6 +702,3 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectDimming();
   initPersonalizedPackage();
 });
-
-
-
