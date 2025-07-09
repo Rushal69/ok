@@ -594,43 +594,57 @@ We start by understanding your flow, then craft simple systems that feel natural
 <div class="footer-hero" style="position: relative; z-index: 10; background: black;">
   <div class="footer-hero-content" style="text-align: center; padding: 40px 20px;">
     <p class="footer-label" style="color: white;">CONTACT ME</p>
-    
+
     <div class="footer-main-text">
       <h1 class="footer-title" style="color: white; margin: 0;">GET IN</h1>
       <h1 class="footer-title-outline" style="color: white; margin: 0;">TOUCH</h1>
     </div>
 
+    <!-- Sleek pill-style contact button -->
     <a href="mailto:rushalr111@gmail.com"
-       class="footer-contact-btn"
        style="
-         color: white !important;
-         background: #444 !important;
-         padding: 12px 24px !important;
-         display: inline-flex !important;
-         align-items: center !important;
-         gap: 10px !important;
-         border-radius: 6px !important;
-         text-decoration: none !important;
-         position: relative !important;
-         z-index: 1000 !important;
-         opacity: 1 !important;
-         visibility: visible !important;
-         pointer-events: auto !important;
-         margin-top: 20px;
-       ">
-      <span style="color: white; font-weight: bold;">CONTACT</span>
-      <svg width="24" height="24" viewBox="0 0 24 24" style="display: block;">
-        <path d="M7 17L17 7M17 7H7M17 7V17"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"/>
-      </svg>
+         display: inline-flex;
+         align-items: center;
+         justify-content: space-between;
+         background: white;
+         color: black;
+         border-radius: 9999px;
+         padding: 12px 20px 12px 24px;
+         text-decoration: none;
+         font-family: sans-serif;
+         font-weight: 500;
+         font-size: 14px;
+         letter-spacing: 2px;
+         width: fit-content;
+         gap: 16px;
+         transition: transform 0.2s ease, background 0.3s ease;
+         margin-top: 30px;
+       "
+       onmouseover="this.style.transform='translateY(-2px)'"
+       onmouseout="this.style.transform='translateY(0)'"
+    >
+      <span>CONTACT</span>
+      <div style="
+        background: black;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+      </div>
     </a>
   </div>
 </div>
 
-  
 <div class="footer-bottom" style="display: flex; justify-content: center;">
   <div class="footer-bottom-content" style="text-align: center;">
     <div class="footer-info">
