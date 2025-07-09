@@ -1,8 +1,12 @@
 const faqs = [
     // General Questions
-    { category: 'general', question: 'How do I get started with a project?', answer: 'It\'s easy! Just send us a message at rushal111r@gmail.com. Let us know what you need, and we can discuss your project in detail.' },
-    { category: 'general', question: 'How long does a project usually take?', answer: 'The timeline depends on the scope of the project. Typically, a project can take anywhere from a few weeks to a few months.' },
-    { category: 'general', question: 'What do you need from me to get started?', answer: 'We need a clear brief of what you want to achieve, along with any content and images you want to include on the site.' },
+    { category: 'general', question: 'What exactly is Versico, and how does it help students?', answer: 'Versico is a calm, all-in-one system designed to streamline your student life. From managing academics, routines, and productivity to planning your career — it brings clarity and structure using beautifully crafted Notion dashboards, personalized tools, and minimal interfaces that don't overwhelm.' },
+    { category: 'general', question: ' Do I need to know Notion or any tech to use Versico?', answer: 'Not at all. Versico is built for students of all backgrounds — even if you have never used Notion before. Every dashboard includes a step-by-step guide, pre-built templates, and smart systems that are plug-and-play. It just works — out of the box.
+
+
+
+' },
+    { category: 'general', question: ' Can Versico actually make a difference in my routine or career?', answer: 'Absolutely — that’s the core promise. Versico is not just another productivity template. It’s a well-researched system, built by IIM students, to solve real daily student struggles — like academic pressure, time anxiety, and career confusion. Our users report feeling more in control, organized, and confident within days.' },
     { category: 'general', question: 'Do you provide ongoing support after the project?', answer: 'Yes, we offer continuous support, maintenance, and updates for your website to ensure it keeps running smoothly.' },
     
 // Starter Plan
