@@ -19,7 +19,7 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     color: var(--white);
-    font-family: 'Satoshi-Medium';
+    font-family: 'Satoshi-Regular';
     font-weight: 400;
     text-transform: capitalize;
     -webkit-font-smoothing: antialiased;
@@ -51,12 +51,13 @@
   
 
 h4{
-    font-size: 16px ;
+    font-size: 18px ;
+    font-weight: 500;
 }
 h4::before {
     content: "•"; /* Bullet symbol */
-    font-size: 16px !important; /* Adjust size to match heading */
-    margin-right: 12px;
+    font-size: 18px !important; /* Adjust size to match heading */
+    margin-right: 14px;
 }
 
 
@@ -84,13 +85,14 @@ img{
 
 .primary-button{
     display: inline-block;
-    padding: 12px 26px;
-    border-radius: 12px;
-    font-size: 16px;
+    padding: 14px 30px;
+    border-radius: 14px;
+    font-size: 17px;
     cursor: pointer;
     color: var(--black);
     background-color: var(--white);
     text-decoration: none;
+    font-weight: 500;
 }
 
 /* .primary-button:hover{
@@ -140,18 +142,20 @@ img{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 36px;
+    gap: 40px;
 }
 
 .nav-links a{
     text-decoration: none;
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: 500;
 }
 
 .logo{
     a{
-        font-size: 24px;
+        font-size: 26px;
         text-decoration: none;
+        font-weight: 600;
     }
 }
 
@@ -283,11 +287,13 @@ footer{
 
 footer{
     h5{
-        font-size: 20px;
+        font-size: 22px;
+        font-weight: 500;
     }
     h2{
-        font-size: 64px;
-        margin-top: 24px;
+        font-size: 68px;
+        margin-top: 28px;
+        font-weight: 700;
     }
    h2 span a{
         text-decoration: none;
@@ -298,8 +304,9 @@ footer{
 .footer-links{
     a{
         text-decoration: none;
-        margin-right: 40px;
-        font-size: 20px;
+        margin-right: 44px;
+        font-size: 22px;
+        font-weight: 500;
     }
 }
 
