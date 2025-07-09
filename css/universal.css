@@ -374,6 +374,7 @@ footer{
         -ms-flex-align: center;
             align-items: center;
     gap: 40px;
+    margin-left: 20px;
 }
 
 .footer-info p {
