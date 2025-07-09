@@ -227,7 +227,8 @@ function initSplitTextAnimation() {
             tl.fromTo(text.chars,
                 { color: bg, opacity: 0.5 },
                 { color: fg, opacity: 1, duration: 0.3, stagger: 0.02, ease: 'power2.out' },
-                i === 0 ? 0 : '>=1'
+               i === 0 ? 0 : "+=1"
+
             );
         });
     }
