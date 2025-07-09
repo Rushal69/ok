@@ -669,7 +669,7 @@ line-height: 1.5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4vw;
+  gap: 2vw;
   margin: 0 auto;
   width: 90%;
   max-width: 1680px;
@@ -681,8 +681,8 @@ line-height: 1.5;
   background-color: var(--black);
   border-radius: 18px;
   padding: 28px;
-  width: 780px;
-  height: 780px;
+  flex: 1;
+  max-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -767,10 +767,14 @@ hr {
   background-color: #C2F9B9;
 }
 
+.premium{
+  background-color: #F5BE81;
+}
 @media (max-width: 1280px) {
   .pricing-card {
     width: 100%; /* Make pricing card full width on smaller screens */
     height: auto; /* Allow height to adjust automatically */
+    max-width: none;
   }
 }
 
@@ -784,6 +788,7 @@ hr {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; /* Center items horizontally */
+    gap: 3vw;
   }
 
   .pricing-card {
