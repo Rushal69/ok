@@ -706,6 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectDimming();
   initPersonalizedPackage();
   initFooterAnimation();
+  initPricingAnimation();
 });
 
 // Footer Animation
@@ -770,5 +771,47 @@ function initFooterAnimation() {
       stagger: 0.1,
       ease: "back.out(1.7)"
     }, "-=0.4");
+  }
+}
+
+// Pricing Section Animation
+function initPricingAnimation() {
+  const pricingTitle = document.querySelector('.pricing-content h1');
+  const pricingDesc = document.querySelector('.pricing-content p');
+  const pricingCards = document.querySelectorAll('.pricing-card');
+
+  if (pricingTitle && pricingCards.length > 0) {
+    // Create timeline for pricing animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.pricing',
+        start: 'top 70%',
+        end: 'bottom 30%',
+        scroller: ".scroller",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    // Animate pricing elements
+    tl.from(pricingTitle, {
+      duration: 1,
+      y: 80,
+      opacity: 0,
+      ease: "power3.out"
+    })
+    .from(pricingDesc, {
+      duration: 0.8,
+      y: 40,
+      opacity: 0,
+      ease: "power2.out"
+    }, "-=0.5")
+    .from(pricingCards, {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      scale: 0.9,
+      stagger: 0.2,
+      ease: "power3.out"
+    }, "-=0.3");
   }
 }

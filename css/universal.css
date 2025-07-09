@@ -487,3 +487,17 @@ footer{
     color: white;
     visibility: hidden;
   }
+
+
+
+
+/* Design Credit Hover Effect */
+.design-credit {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.design-credit:hover {
+  color: #999 !important;
+  transform: translateY(-2px);
+}
