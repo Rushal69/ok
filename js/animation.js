@@ -1,5 +1,9 @@
 import faqs from './index.js';
 
+// Bring global GSAP variables into module scope
+const gsap = window.gsap;
+const ScrollTrigger = window.ScrollTrigger;
+
 
 
 
