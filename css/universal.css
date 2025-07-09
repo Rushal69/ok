@@ -310,6 +310,19 @@ footer{
     }
 }
 
+.footer-copyright {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.footer-copyright p {
+    font-size: 12px;
+    color: var(--black-gray);
+    margin: 0;
+    text-transform: none;
+}
+
 @media (max-width: 1080px) {
     .footer-container {
         -webkit-box-orient: vertical;
