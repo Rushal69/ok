@@ -705,4 +705,70 @@ document.addEventListener('DOMContentLoaded', () => {
   initSplitTextAnimation();
   initProjectDimming();
   initPersonalizedPackage();
+  initFooterAnimation();
 });
+
+// Footer Animation
+function initFooterAnimation() {
+  const footerTitle = document.querySelector('.footer-title');
+  const footerTitleOutline = document.querySelector('.footer-title-outline');
+  const footerLabel = document.querySelector('.footer-label');
+  const footerBtn = document.querySelector('.footer-contact-btn');
+  const footerInfo = document.querySelectorAll('.footer-info p, .footer-logo');
+  const socialLinks = document.querySelectorAll('.social-link');
+
+  if (footerTitle && footerTitleOutline) {
+    // Create timeline for footer animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: 'footer',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scroller: ".scroller",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    // Animate footer elements
+    tl.from(footerLabel, {
+      duration: 0.8,
+      y: 30,
+      opacity: 0,
+      ease: "power2.out"
+    })
+    .from(footerTitle, {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      ease: "power3.out"
+    }, "-=0.4")
+    .from(footerTitleOutline, {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      ease: "power3.out"
+    }, "-=0.8")
+    .from(footerBtn, {
+      duration: 0.8,
+      y: 30,
+      opacity: 0,
+      scale: 0.9,
+      ease: "back.out(1.7)"
+    }, "-=0.4")
+    .from(footerInfo, {
+      duration: 0.6,
+      y: 20,
+      opacity: 0,
+      stagger: 0.1,
+      ease: "power2.out"
+    }, "-=0.2")
+    .from(socialLinks, {
+      duration: 0.6,
+      y: 20,
+      opacity: 0,
+      scale: 0.8,
+      stagger: 0.1,
+      ease: "back.out(1.7)"
+    }, "-=0.4");
+  }
+}
