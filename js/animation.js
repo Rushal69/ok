@@ -313,7 +313,7 @@ function initMarquee(locoScroll) {
       }, 250);
     });
 
-    console.log('Seamless Infinite Marquee Initialized');
+    console.debug('Seamless Infinite Marquee Initialized');
   } else {
     console.error('Marquee elements not found', {
       marqueeWrapper: !!marqueeWrapper,
