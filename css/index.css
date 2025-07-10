@@ -804,7 +804,7 @@ hr {
 
   .pricing-card {
     padding: 16px;
-    height: 100px;
+    height: auto;
     gap: 10px;
   }
 
