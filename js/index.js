@@ -19,8 +19,8 @@ const faqs = [
     },
     {
         category: 'general',
-        question: 'Do you provide ongoing support after the project?',
-        answer: 'Yes, we offer continuous support, maintenance, and updates for your website to ensure it keeps running smoothly.'
+        question: 'How exactly will this help me in my daily student life?',
+        answer: 'Versico isn’t just a planner it’s a personal system built around your goals. From organizing tasks and managing time, to tracking habits, preparing for internships, and even solving college doubts it acts like your smart assistant. Unlike apps that only store data, Versico guides your focus, reduces overwhelm, and keeps your academic and career journey aligned every single day.'
     },
 
     // Starter Plan
