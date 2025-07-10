@@ -749,7 +749,7 @@ hr {
 .features ul, .monthly-maintenance ul{
   margin-left: 20px;
   margin-top: 20px;
-  max-width: 540px;
+  max-width: 270px;
 
   li{
     font-size: 18px;
