@@ -836,7 +836,7 @@ hr {
   .features ul li,
   .monthly-maintenance ul li {
     font-size: 16px; /* Smaller list items */
-    margin-bottom: 6px;
+    margin-bottom: 12px;
   }
 
 }
