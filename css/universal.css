@@ -748,3 +748,8 @@ footer{
   color: #999 !important;
   transform: translateY(-2px);
 }
+button.submit-btn svg {
+  fill: var(--black) !important;
+  stroke: var(--black) !important;
+  color: var(--black) !important;
+}
