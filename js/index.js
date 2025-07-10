@@ -14,8 +14,8 @@ const faqs = [
     },
     {
         category: 'general',
-        question: 'What do you need from me to get started?',
-        answer: 'We need a clear brief of what you want to achieve, along with any content and images you want to include on the site.'
+        question: 'Do I need technical skills to use this? Will I get stuck?',
+        answer: 'Not at all. Versico is designed to feel intuitive from day one.And if you\'re ever unsure, a real person (not a bot) is here  the creator himself  ready to help you customize or unlock the full power of your system.It’s like having a sharp co-pilot, not just a product.'
     },
     {
         category: 'general',
