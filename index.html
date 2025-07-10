@@ -730,14 +730,21 @@ We start by understanding your flow, then craft simple systems that feel natural
 
  
 
- <script>
-  document.querySelectorAll('.service-card').forEach(card => {
-    const floatText = card.querySelector('.floating-card h3');
-    if (floatText && floatText.innerText.trim() === 'Digital Strategy') {
-      floatText.innerText = 'Student Dashboard';
+<script>
+  // Replace the floating text manually AFTER it's created
+  const observer = new MutationObserver(() => {
+    const floatCard = document.querySelector('#minicircle');
+    if (floatCard && floatCard.textContent.includes("Digital Strategy")) {
+      floatCard.textContent = "Student Dashboard";
     }
   });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 </script>
+
 
 
 
