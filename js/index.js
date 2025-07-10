@@ -3,7 +3,11 @@ const faqs = [
     {
         category: 'general',
         question: 'How is Versico different from a regular Notion template or planner app?',
-        answer: 'Unlike generic Notion templates or basic planner apps, Versico is specifically designed for students with a complete ecosystem approach. We provide not just templates, but ongoing support, doubt-solving help, career guidance, and a curated tool library. While other solutions give you static templates, Versico offers dynamic support with Ask & Reflect sessions, personalized career assistance, and continuous updates. It\'s the difference between getting a template and getting a complete student success system with human support.'
+        answer: 'Versico isn’t just a template — it’s a smart, curated system.
+While planners remind you what to do, Versico helps you understand why and how — blending AI-backed systems, clean dashboards, and decision frameworks.
+It’s built by a top-tier student who cracked the code behind balance, focus, and growth — and it reflects that sharpness in every section.
+
+'
     },
     {
         category: 'general',
