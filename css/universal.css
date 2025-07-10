@@ -264,7 +264,7 @@ img{
 /* Contact Section */
 .contact-section {
   background-color: var(--black);
-  padding: 60px 0 20px;
+  padding: 60px 0 0px;
   position: relative;
 }
 
@@ -278,7 +278,7 @@ img{
   display: flex;
   align-items: flex-start;
   gap: 100px;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 .contact-left {
@@ -326,7 +326,7 @@ img{
 }
 
 .contact-form {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .form-row {
@@ -491,7 +491,7 @@ img{
 
 @media (max-width: 600px) {
   .contact-section {
-    padding: 40px 0 10px;
+    padding: 40px 0 0px;
   }
   
   .form-row {
