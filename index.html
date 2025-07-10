@@ -730,21 +730,6 @@ We start by understanding your flow, then craft simple systems that feel natural
 
  
 
-<script>
-  // Replace the floating text manually AFTER it's created
-  const observer = new MutationObserver(() => {
-    const floatCard = document.querySelector('#minicircle');
-    if (floatCard && floatCard.textContent.includes("Digital Strategy")) {
-      floatCard.textContent = "Student Dashboard";
-    }
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
-</script>
-
 
 
 
