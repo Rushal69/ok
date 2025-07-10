@@ -10,7 +10,7 @@ const faqs = [
     {
         category: 'general',
         question: 'How long does a project usually take?',
-        answer: 'The timeline depends on the scope of the project. Typically, a project can take anywhere from a few weeks to a few months.'
+        answer: 'Versico is your all-in-one student operating system not just a planner, but a life optimizer. Built for modern students navigating chaos, Versico streamlines everything: academics, self-growth, career clarity, and daily habits. It\’s not just a tool  it\’s a thinking partner. Designed to bring structure, calm, and smart systems into your student life. No fluff. Just what works.'
     },
     {
         category: 'general',
