@@ -1258,5 +1258,8 @@ padding-bottom: 180px;
   margin-bottom: 12 !important;
   padding-bottom: 12 !important;
 }
+.faq-section, .faq-header {
+  margin-top: 100px; /* Increase or decrease this as needed */
+}
 
 
