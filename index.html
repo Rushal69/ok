@@ -732,4 +732,19 @@ We start by understanding your flow, then craft simple systems that feel natural
 <script>
   document.querySelectorAll(".service-card").forEach(el => el.onmousemove = el.onmouseenter = el.onmouseleave = null);
 </script>
+  <script>
+  document.querySelectorAll('.service-card').forEach(card => {
+    const floatText = card.querySelector('.floating-card h3');
+    if (floatText) {
+      // Change based on service type
+      if (card.innerText.includes('Digital Strategy')) {
+        floatText.innerText = 'Custom Strategy Text';
+      } else if (card.innerText.includes('Web Development')) {
+        floatText.innerText = 'Dev Magic';
+      }
+      // Add more if needed...
+    }
+  });
+</script>
+
 </body></html>
