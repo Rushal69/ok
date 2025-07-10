@@ -264,7 +264,7 @@ img{
 /* Contact Section */
 .contact-section {
   background-color: var(--black);
-  padding: 120px 0 60px;
+  padding: 60px 0 20px;
   position: relative;
 }
 
@@ -491,7 +491,7 @@ img{
 
 @media (max-width: 600px) {
   .contact-section {
-    padding: 80px 0 40px;
+    padding: 40px 0 10px;
   }
   
   .form-row {
@@ -594,7 +594,7 @@ footer{
 
 .footer-bottom {
     border-top: 1px solid var(--white-gray);
-    padding: 40px 0;
+  padding: 20px 0;
 }
 
 .footer-bottom-content {
@@ -680,7 +680,7 @@ footer{
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        gap: 30px;
+        gap: 15px;
     }
     
     .footer-info {
@@ -688,12 +688,12 @@ footer{
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         text-align: center;
     }
     
     .footer-hero {
-        padding: 80px 0;
+        padding: 40px 0;
     }
 }
 
