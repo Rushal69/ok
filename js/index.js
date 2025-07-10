@@ -2,8 +2,8 @@ const faqs = [
     // General Questions
     {
         category: 'general',
-        question: 'How do I get started with a project?',
-        answer: 'It\'s easy! Just send us a message at dhruv@onemanstudio.in. Let us know what you need, and we can discuss your project in detail.'
+        question: 'What exactly is Versico, and why should a student use it?',
+        answer: 'Versico is a calm, minimalist system designed specifically for students to organize their life, studies, and career with clarity. We provide focused Notion dashboards, essential productivity tools, and support systems that help you manage everything from daily planning to career development. Students use Versico because it eliminates clutter and provides exactly what you need to stay organized, focused, and on track with your academic and personal goals.'
     },
     {
         category: 'general',
