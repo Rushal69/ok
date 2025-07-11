@@ -392,9 +392,6 @@ function initPersonalizedPackage() {
       const faqItem = document.createElement('div');
       faqItem.classList.add('faq-item');
       faqItem.setAttribute('data-category', faq.category);
-      faqItem.setAttribute('role', 'button');
-      faqItem.setAttribute('tabindex', '0');
-      faqItem.setAttribute('aria-expanded', 'false');
   
       // Create the wrapper div for the question and toggle button
       const faqHeader = document.createElement('div');
@@ -412,7 +409,6 @@ function initPersonalizedPackage() {
       const toggleBtn = document.createElement('span');
       toggleBtn.classList.add('toggle-btn');
       toggleBtn.textContent = '+';  // Initially set as '+'
-      toggleBtn.setAttribute('aria-label', 'Toggle answer');
   
       // Append toggle button to the wrapper div
       toggleBtnWrapper.appendChild(toggleBtn);
@@ -429,8 +425,6 @@ function initPersonalizedPackage() {
       faqAnswer.textContent = faq.answer;
       faqAnswer.style.maxHeight = '0'; // Set maxHeight for transition effect
       faqAnswer.style.overflow = 'hidden'; // Ensure overflow is hidden
-      faqAnswer.setAttribute('id', `answer-${faq.category}-${filteredFaqs.indexOf(faq)}`);
-      faqItem.setAttribute('aria-describedby', faqAnswer.id);
   
       // Append the answer to the faq item
       faqItem.appendChild(faqAnswer);
@@ -438,46 +432,24 @@ function initPersonalizedPackage() {
       // Append the FAQ item to the container
       faqContainer.appendChild(faqItem);
   
-      // Enhanced toggle function
-      const toggleFaq = () => {
+      // Add event listener to the header
+      faqHeader.addEventListener('click', () => {
         const currentAnswer = faqHeader.nextElementSibling;
         const currentToggleBtn = toggleBtn;
   
-        // Close all other FAQs
         document.querySelectorAll('.faq-item p').forEach(answer => {
           if (answer !== currentAnswer) {
             answer.style.maxHeight = '0';
-            answer.classList.remove('show');
-            const otherToggleBtn = answer.previousElementSibling.querySelector('.toggle-btn');
-            otherToggleBtn.textContent = '+';
-            otherToggleBtn.classList.remove('active');
-            answer.parentElement.setAttribute('aria-expanded', 'false');
+            answer.previousElementSibling.querySelector('.toggle-btn').textContent = '+';
           }
         });
   
         if (currentAnswer.style.maxHeight === '0px' || !currentAnswer.style.maxHeight) {
           currentAnswer.style.maxHeight = currentAnswer.scrollHeight + 'px'; // Expand
-          currentAnswer.classList.add('show');
           currentToggleBtn.textContent = '-';
-          currentToggleBtn.classList.add('active');
-          faqItem.setAttribute('aria-expanded', 'true');
         } else {
           currentAnswer.style.maxHeight = '0px'; // Collapse
-          currentAnswer.classList.remove('show');
           currentToggleBtn.textContent = '+';
-          currentToggleBtn.classList.remove('active');
-          faqItem.setAttribute('aria-expanded', 'false');
-        }
-      };
-      
-      // Add event listeners
-      faqHeader.addEventListener('click', toggleFaq);
-      
-      // Keyboard accessibility
-      faqItem.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleFaq();
         }
       });
     });
@@ -486,11 +458,8 @@ function initPersonalizedPackage() {
   // Filter Functionality
   document.querySelectorAll('.filter-btn').forEach(button => {
     button.addEventListener('click', () => {
-      // Update ARIA states
       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.setAttribute('aria-selected', 'false'));
       button.classList.add('active');
-      button.setAttribute('aria-selected', 'true');
       loadFaqs(button.getAttribute('data-category'));
     });
   });
