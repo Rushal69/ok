@@ -23,9 +23,19 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     user-select: none;
+    /* Improved performance */
+    will-change: auto;
 }
 
+/* Smooth animations */
+*, *::before, *::after {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+/* Remove transitions for elements that change frequently */
+.marquee, .marquee *, #minicircle {
+    transition: none !important;
+}
 
 #minicircle {
     -webkit-transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
@@ -37,8 +47,10 @@
     z-index: 999;
     border-radius: 50%;
     background-color: var(--white);
-    /* mix-blend-mode: multiply; */
+    mix-blend-mode: difference;
     opacity: 0;
+    pointer-events: none;
+    will-change: transform;
   }
   
   
@@ -91,11 +103,35 @@ img{
     background-color: var(--white);
     text-decoration: none;
     font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .primary-button:hover{
-    filter: brightness(0.8);
-} */
+.primary-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+}
+
+.primary-button:hover::before {
+    left: 100%;
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
 
 /* nav bar */
 
@@ -115,6 +151,7 @@ img{
     margin: 0 auto;
     position: relative;
     z-index: 20;
+    backdrop-filter: blur(10px);
     
 }
 
@@ -147,6 +184,27 @@ img{
     text-decoration: none;
     font-size: 19px;
     font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
 }
 
 .logo{
@@ -154,6 +212,11 @@ img{
         font-size: 26px;
         text-decoration: none;
         font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    a:hover {
+        transform: scale(1.05);
     }
 }
 
@@ -176,6 +239,8 @@ img{
     transition: transform 0.3s ease, opacity 0.2s ease;
     transition: transform 0.3s ease, opacity 0.2s ease, -webkit-transform 0.3s ease; /* Smooth transition */
     display: none;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
 
   .nav-container h2 {
@@ -188,6 +253,22 @@ img{
 
   .nav-item{
     margin-bottom: 16px;
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: slideInNav 0.3s ease forwards;
+  }
+  
+  .nav-item:nth-child(1) { animation-delay: 0.1s; }
+  .nav-item:nth-child(2) { animation-delay: 0.2s; }
+  .nav-item:nth-child(3) { animation-delay: 0.3s; }
+  .nav-item:nth-child(4) { animation-delay: 0.4s; }
+  .nav-item:nth-child(5) { animation-delay: 0.5s; }
+  
+  @keyframes slideInNav {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 
   .nav-item a {
@@ -195,10 +276,16 @@ img{
     text-decoration: none;
     color: var(--black);
     font-size: 20px;
+    padding: 8px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
 
   .nav-item a:hover {
-    color: var(--white-gray);
+    color: var(--white);
+    background-color: var(--black);
+    padding-left: 12px;
+    transform: translateX(8px);
   }
 
   .nav-item img {
@@ -209,6 +296,10 @@ img{
   .email-container {
     margin-top: 80px;
     font-size: 14px;
+    animation: slideInNav 0.3s ease forwards;
+    animation-delay: 0.6s;
+    transform: translateX(-20px);
+    opacity: 0;
   }
 
   .email-container p {
@@ -220,6 +311,12 @@ img{
     font-size: 24px;
     text-decoration: none;
     color: var(--black);
+    transition: all 0.3s ease;
+  }
+  
+  .email-container a:hover {
+    color: var(--white-gray);
+    transform: scale(1.05);
   }
 
   .close-btn {
@@ -231,6 +328,19 @@ img{
     position: absolute;
     top: 12px;
     right: 20px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+    transform: rotate(90deg);
   }
 
 
@@ -294,6 +404,7 @@ img{
   margin: 0;
   font-family: 'Satoshi-Regular';
   letter-spacing: -2px;
+  animation: fadeInUp 1s ease;
 }
 
 .contact-decoration {
@@ -301,6 +412,12 @@ img{
   top: 50%;
   right: -50px;
   transform: translateY(-50%);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(-50%); }
+  50% { transform: translateY(-60%); }
 }
 
 .contact-circle {
@@ -309,6 +426,12 @@ img{
   border-radius: 50%;
   background-color: var(--white);
   margin-bottom: 00px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 .contact-line {
@@ -318,6 +441,12 @@ img{
   margin-left: 29px;
   transform: rotate(25deg);
   transform-origin: top;
+  animation: drawLine 1s ease 0.5s both;
+}
+
+@keyframes drawLine {
+  from { height: 0; }
+  to { height: 150px; }
 }
 
 .contact-right {
@@ -327,6 +456,7 @@ img{
 
 .contact-form {
   margin-bottom: 20px;
+  animation: fadeInUp 1s ease 0.3s both;
 }
 
 .form-row {
@@ -374,6 +504,7 @@ img{
 .form-group input:focus,
 .form-group textarea:focus {
   border-bottom-color: var(--white);
+  transform: translateY(-2px);
 }
 
 .form-group textarea {
@@ -399,16 +530,38 @@ img{
   justify-content: center;
   transition: all 0.3s ease;
   color: var(--black);
+  position: relative;
+  overflow: hidden;
 }
 
 .submit-btn:hover {
   transform: scale(1.1);
   background-color: #f0f0f0;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.submit-btn:active::before {
+  width: 100px;
+  height: 100px;
 }
 
 .contact-info {
   display: flex;
   gap: 60px;
+  animation: fadeInUp 1s ease 0.6s both;
 }
 
 .contact-info-item h4 {
@@ -431,6 +584,17 @@ img{
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
@@ -577,11 +741,14 @@ footer{
     letter-spacing: 1px;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer-contact-btn:hover {
     background-color: var(--white-gray);
     transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
 }
 
 .footer-contact-btn svg {
@@ -638,6 +805,12 @@ footer{
     color: var(--white);
     text-transform: uppercase;
     letter-spacing: 2px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+  to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
 }
 
 .footer-social {
@@ -664,11 +837,29 @@ footer{
             justify-content: center;
     text-decoration: none;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.2), transparent);
+    transition: left 0.5s;
 }
 
 .social-link:hover {
     background-color: var(--white-gray);
     transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+}
+
+.social-link:hover::before {
+    left: 100%;
 }
 
 @media (max-width: 1080px) {

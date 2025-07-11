@@ -1,80 +1,131 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/universal.css" as="style">
+    <link rel="preload" href="css/satoshi.css" as="style">
+    <link rel="preload" href="fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="images/hero-2xl.webp" as="image">
 
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//unpkg.com">
+    <link rel="dns-prefetch" href="//calendly.com">
+    <link rel="dns-prefetch" href="//formspree.io">
 
     <!-- Meta Description -->
-  <meta name="description" content="Versico helps creators increase their revenue by providing customized websites to their unique brand and business goals.">
+  <meta name="description" content="Versico - Calm, minimalist systems for students to organize life, studies, and career with clarity. Get focused Notion dashboards, daily planners, and essential productivity tools.">
 
   <!-- Meta Keywords -->
-  <meta name="keywords" content="personalized websites for creators, creator revenue, custom website design, increase revenue, creative web design, branding for creators, digital solutions for creators, website development for creators, creator business solutions">
+  <meta name="keywords" content="student organization system, notion dashboard, academic planner, study tools, student productivity, career support, doubt solving, minimalist planning, student life management">
 
   <!-- Meta Robots Tag -->
   <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.versico.in">
 
   <!-- Open Graph Meta Tags for Social Media -->
-  <meta property="og:title" content="Versico - Personalized Websites for Creators to Boost Revenue">
-  <meta property="og:description" content="At Versico, we specialize in designing personalized websites that help creators increase their revenue and enhance their online presence.">
-  <!-- <meta property="og:image" content="URL_TO_IMAGE_THUMBNAIL"> -->
+  <meta property="og:title" content="Versico - Organize Better With Calm Systems">
+  <meta property="og:description" content="Calm, minimalist systems for students to organize life, studies, and career with clarity. Get focused Notion dashboards and essential productivity tools.">
+  <meta property="og:image" content="https://www.versico.in/assets/favicon/versico-logo.png">
   <meta property="og:url" content="https://www.versico.in">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Versico">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Versico - Personalized Websites for Creators to Boost Revenue">
-  <meta name="twitter:description" content="Increase your creator revenue with a personalized website by Versico. Tailored designs to help you grow and engage your audience.">
-  <!-- <meta name="twitter:image" content="URL_TO_IMAGE_THUMBNAIL"> -->
+  <meta name="twitter:title" content="Versico - Organize Better With Calm Systems">
+  <meta name="twitter:description" content="Calm, minimalist systems for students to organize life, studies, and career with clarity.">
+  <meta name="twitter:image" content="https://www.versico.in/assets/favicon/versico-logo.png">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="author" content="Versico">
+  <meta name="theme-color" content="#090909">
+  <meta name="msapplication-TileColor" content="#090909">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Versico",
+    "url": "https://www.versico.in",
+    "logo": "https://www.versico.in/assets/favicon/versico-logo.png",
+    "description": "Calm, minimalist systems for students to organize life, studies, and career with clarity.",
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Rushal"
+    },
+    "sameAs": [
+      "https://calendly.com/ruv-versico"
+    ]
+  }
+  </script>
 
     
 
   <title>Versico</title>
-  <link rel="stylesheet" href="css/index.css">
+  
+  <!-- Critical CSS loaded first -->
   <link rel="stylesheet" href="css/universal.css">
   <link rel="stylesheet" href="css/satoshi.css">
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/locomotive-scroll.css">
   
 
    <link rel="shortcut icon" href="assets/favicon/versico-logo.png" type="image/png">
    <link rel="icon" href="assets/favicon/versico-logo.png" type="image/png">
    <link rel="apple-touch-icon" href="assets/favicon/versico-logo.png">
+   
+   <!-- Performance optimization -->
+   <style>
+     /* Critical CSS for above-the-fold content */
+     .preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #0c0a0b; overflow: hidden; z-index: 999; }
+     .hero { height: 100vh; width: 100%; position: relative; max-width: 1920px; margin: 0 auto; }
+     body, html { height: 100%; width: 100%; background-color: #090909; margin: 0; padding: 0; }
+   </style>
 </head>
-<body>
+<body role="document">
 
 
 
   <div class="preloader">
     <div class="text-container">
-      <h1>Ver</h1>
-      <h1>si</h1>
-      <h1>co</h1>
-      <h1>🕊️ </h1>
+      <h1 aria-hidden="true">Ver</h1>
+      <h1 aria-hidden="true">si</h1>
+      <h1 aria-hidden="true">co</h1>
+      <h1 aria-hidden="true">🕊️ </h1>
     </div>
   </div>
 
 
 
   
-  <div id="minicircle"></div>
+  <div id="minicircle" aria-hidden="true"></div>
 
   
-    <div class="scroller">
+    <div class="scroller" role="main">
 
 
-        <section class="hero" id="hero" data-scroll="" data-scroll-speed="-2">
+        <section class="hero" id="hero" data-scroll="" data-scroll-speed="-2" role="banner">
 
           
 
-            <nav class="nav-bar">
+            <nav class="nav-bar" role="navigation" aria-label="Main navigation">
 
-              <div class="logo"><a href="index.html">
+              <div class="logo"><a href="index.html" aria-label="Versico Home">
                 <svg width="358" height="49" viewBox="0 0 358 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <text x="20" y="45" font-family="Satoshi-Bold" font-size="85" font-weight="900" fill="white">Versico</text>
                   </svg>
             </a></div>
 
                 <div class="nav-links">
-                    <a href="#about" data-scroll-to="">About</a>
-                    <a href="#work" data-scroll-to="">Work</a>
-                    <a href="#pricing" data-scroll-to="">Pricing</a>
+                    <a href="#about" data-scroll-to="" aria-label="About section">About</a>
+                    <a href="#work" data-scroll-to="" aria-label="Work section">Work</a>
+                    <a href="#pricing" data-scroll-to="" aria-label="Pricing section">Pricing</a>
                 </div>
 
                 
@@ -84,14 +135,14 @@
 
 
 
-            <div class="small-screen-nav">
-              <div class="logo"><a href="index.html">
+            <div class="small-screen-nav" role="navigation" aria-label="Mobile navigation">
+              <div class="logo"><a href="index.html" aria-label="Versico Home">
                 <svg width="358" height="49" viewBox="0 0 358 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <text x="20" y="35" font-family="Satoshi-Bold" font-size="40" font-weight="900" fill="white">Versico</text>
                   </svg>
             </a></div>
 
-<button class="menu">
+<button class="menu" aria-label="Open navigation menu" aria-expanded="false">
   <svg width="40" height="18" viewBox="0 0 44 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M2 2H42" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
     <path d="M2 18H42" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -102,46 +153,46 @@
             </div>
 
 
-<div class="nav-container">
-  <button class="close-btn"> </button>
+<div class="nav-container" role="dialog" aria-label="Navigation menu">
+  <button class="close-btn" aria-label="Close navigation menu">×</button>
   <h2>Navigation</h2>
 
 
     <div class="nav-item">
-      <a href="#hero" data-scroll-to="">Home</a>
+      <a href="#hero" data-scroll-to="" aria-label="Home section">Home</a>
     </div>
     <div class="nav-item">
-      <a href="#about" data-scroll-to="">about</a>
+      <a href="#about" data-scroll-to="" aria-label="About section">about</a>
     </div>
     <div class="nav-item">
-      <a href="#work" data-scroll-to="">work</a>
+      <a href="#work" data-scroll-to="" aria-label="Work section">work</a>
     </div>
     <div class="nav-item">
-      <a href="#pricing" data-scroll-to="">pricing</a>
+      <a href="#pricing" data-scroll-to="" aria-label="Pricing section">pricing</a>
     </div>
     <div class="nav-item">
-      <a href="#faq" data-scroll-to="">faq</a>
+      <a href="#faq" data-scroll-to="" aria-label="FAQ section">faq</a>
     </div>
 
   <div class="email-container">
     <p>Write us an Email:</p>
-    <a href="mailto:dhruv@versico.in">dhruv@versico.in</a>
+    <a href="mailto:dhruv@versico.in" aria-label="Send email to dhruv@versico.in">dhruv@versico.in</a>
   </div>
 </div>
 
 
-<main class="hero-content">
+<main class="hero-content" role="main">
   <div class="hero-h1-container">
 
     <div class="hero-h1-box">
-              <h1>Organize </h1> 
+              <h1>Organize</h1> 
         <h1>Better</h1>
     </div>
 
     <div class="hero-h1-box">
-              <h1> With</h1>
-        <h1> Calm</h1>
-        <h1> Systems</h1>
+              <h1>With</h1>
+        <h1>Calm</h1>
+        <h1>Systems</h1>
     </div>
 
 
@@ -150,22 +201,22 @@
   </div>
 
 
-    <a href="mailto:dhruv@versico.in" class="primary-button"> Let's Connect</a>
+    <a href="mailto:dhruv@versico.in" class="primary-button" aria-label="Contact us via email">Let's Connect</a>
 </main>
 
 
-<img src="images/hero-2xl.webp" alt="hero-image">
+<img src="images/hero-2xl.webp" alt="Versico hero background showing organized workspace" loading="eager" width="1920" height="1080">
 
-<div class="black-filter"></div>
+<div class="black-filter" aria-hidden="true"></div>
             
         </section>
 
 
         
 
-        <section class="about" id="about">
+        <section class="about" id="about" role="region" aria-labelledby="about-heading">
           <div class="about-container">
-            <h4>About Us</h4>
+            <h4 id="about-heading">About Us</h4>
             <p class="reveal-type" data-bg-color="var(--black-gray)" data-fg-color="var(--white)">
               Versico is a calm, minimalist system built for students to 
               organize life, studies, and career with clarity. From daily planning to mental reset tools, we provide focused Notion dashboards and essential systems  no clutter, just what you need.
@@ -184,60 +235,60 @@
 
 
 
-          <section class="service">
+          <section class="service" role="region" aria-labelledby="services-heading">
             
 
             
    <div class="service-container">       
-              <h4>Founded By Rushal, IIM Student</h4>
-              <div class="service-card">
-                <img src="images/digital-strategy.png">
+              <h4 id="services-heading">Founded By Rushal, IIM Student</h4>
+              <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-describedby="personal-dashboard-desc">
+                <img src="images/digital-strategy.png" alt="Personal Dashboard illustration" loading="lazy">
                 <div class="service-card-header">
-                <h1>Personal Dashboard </h1>
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <h3>Personal Dashboard</h3>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M4 28C13.7631 18.2369 29 3 29 3M29 3H6.5M29 3V25.5" stroke="white" stroke-width="5" stroke-linecap="square"></path>
                   </svg>
                   
                 </div>
 
-                 <p class="definition">An elegantly structured digital space built to centralize your academic, personal, and daily routines. Track your syllabus, assignments, goals, and mental clarity — all within a minimalist interface designed for calm productivity. From class schedules to journaling and habit building, your dashboard evolves with your journey, giving you complete control over your student life.</p>
+                 <p class="definition" id="personal-dashboard-desc">An elegantly structured digital space built to centralize your academic, personal, and daily routines. Track your syllabus, assignments, goals, and mental clarity — all within a minimalist interface designed for calm productivity. From class schedules to journaling and habit building, your dashboard evolves with your journey, giving you complete control over your student life.</p>
             </div>
            
 
-           <div class="service-card">
-              <img src="images/web-dev.png" alt="">
+           <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-describedby="career-support-desc">
+              <img src="images/web-dev.png" alt="Career Support illustration" loading="lazy">
               <div class="service-card-header">
-                <h1> Career Support</h1>
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <h3>Career Support</h3>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path d="M4 28C13.7631 18.2369 29 3 29 3M29 3H6.5M29 3V25.5" stroke="white" stroke-width="5" stroke-linecap="square"></path>
                   </svg>
                 </div>
 
-                 <p class="definition"> A comprehensive support system to help you build and refine your career path with confidence. Access resume reviews, SOP guidance, profile enhancement (LinkedIn, GitHub), and curated internships or job opportunities tailored to your interests. Our exclusive career templates, trackers, and resources ensure you stay prepared, polished, and positioned for real-world success — whether you're just starting or looking to pivot.</p>
+                 <p class="definition" id="career-support-desc">A comprehensive support system to help you build and refine your career path with confidence. Access resume reviews, SOP guidance, profile enhancement (LinkedIn, GitHub), and curated internships or job opportunities tailored to your interests. Our exclusive career templates, trackers, and resources ensure you stay prepared, polished, and positioned for real-world success — whether you're just starting or looking to pivot.</p>
           </div>
 
-          <div class="service-card">
-            <img src="images/ui-design.png" alt="">
+          <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-describedby="doubt-solving-desc">
+            <img src="images/ui-design.png" alt="Doubt Solving Help illustration" loading="lazy">
             <div class="service-card-header">
-              <h1> Doubt Solving Help </h1>
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <h3>Doubt Solving Help</h3>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M4 28C13.7631 18.2369 29 3 29 3M29 3H6.5M29 3V25.5" stroke="white" stroke-width="5" stroke-linecap="square"></path>
                 </svg>          
               </div>
 
-               <p class="definition"> Your personal academic and life assistant — available whenever you need clarity. Ask subject-specific queries across disciplines or personal questions that affect your student journey. From quick conceptual fixes to career dilemmas and mental load, we offer reliable, category-based responses through a blend of peer logic and structured insight — with zero judgment and full privacy.</p>
+               <p class="definition" id="doubt-solving-desc">Your personal academic and life assistant — available whenever you need clarity. Ask subject-specific queries across disciplines or personal questions that affect your student journey. From quick conceptual fixes to career dilemmas and mental load, we offer reliable, category-based responses through a blend of peer logic and structured insight — with zero judgment and full privacy.</p>
       </div>
 
-        <div class="service-card elemlast">
-          <img src="images/ongoing-support.png" alt="">
+        <div class="service-card elemlast" role="button" tabindex="0" aria-expanded="false" aria-describedby="tool-library-desc">
+          <img src="images/ongoing-support.png" alt="Tool Library illustration" loading="lazy">
           <div class="service-card-header">
-            <h1>Tool Library</h1>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <h3>Tool Library</h3>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M4 28C13.7631 18.2369 29 3 29 3M29 3H6.5M29 3V25.5" stroke="white" stroke-width="5" stroke-linecap="square"></path>
               </svg>             
             </div>
 
-             <p class="definition">A precision-curated collection of the most powerful digital tools designed to enhance your learning, productivity, creativity, and focus. Each tool is vetted, explained in plain language, and categorized for practical use — from AI writing assistants to visual planners, brain dump editors, and study enhancers. No noise. Just essentials, ready to embed or launch.
+             <p class="definition" id="tool-library-desc">A precision-curated collection of the most powerful digital tools designed to enhance your learning, productivity, creativity, and focus. Each tool is vetted, explained in plain language, and categorized for practical use — from AI writing assistants to visual planners, brain dump editors, and study enhancers. No noise. Just essentials, ready to embed or launch.
 
 </p>
   </div>
@@ -247,11 +298,12 @@
           </section>
 
           
-          <section class="approach">
+          <section class="approach" role="region" aria-labelledby="approach-heading">
 
             <div class="approach-container">
 
               <div class="approach-content">
+              <h4 id="approach-heading" class="sr-only">Our Approach</h4>
               <p>
                At Versico, we design quiet, intentional spaces for people building something of their own. Whether you're a student juggling deadlines or a creator shaping your next big idea, our tools are built to clear noise—not add to it.
 We start by understanding your flow, then craft simple systems that feel natural to use. From daily dashboards to long-term support, everything we build is made to help you focus, grow, and breathe a little easier.
@@ -273,15 +325,15 @@ We start by understanding your flow, then craft simple systems that feel natural
           </section>
 
 
-          <section class="work" id="work">
+          <section class="work" id="work" role="region" aria-labelledby="work-heading">
 
-            <h4>Our Work</h4>
-
-
+            <h4 id="work-heading">Our Work</h4>
 
 
-            <div class="marquee-wrapper">
-              <div class="marquee">
+
+
+            <div class="marquee-wrapper" aria-hidden="true">
+              <div class="marquee" role="presentation">
                   <div class="marquee-content">
                       <h1 class="js-text">Services</h1>
                       <span><img src="images/white-star.svg" alt="star"></span>
@@ -316,16 +368,16 @@ We start by understanding your flow, then craft simple systems that feel natural
                 <div class="project-row project-row1">
 
 
-                  <a class="project-btn" href="project/sam.html">
+                  <a class="project-btn" href="project/sam.html" aria-label="View Sam Ozkural project">
 
                     <div class="project project-1">
                         <div class="project-img">
-                          <img src="images/sam-thumbnail.png" alt="Porject thumbnail">
+                          <img src="images/sam-thumbnail.png" alt="Sam Ozkural project thumbnail" loading="lazy">
                         </div>
                         <div class="project-info">
                           <h5>Sam ozkural</h5>
                           <p>
-                            <span><img src="images/star.svg"></span>
+                            <span><img src="images/star.svg" alt="star icon"></span>
                            life vlogger
                           </p>
                         </div>
@@ -336,7 +388,7 @@ We start by understanding your flow, then craft simple systems that feel natural
 
                       <div class="project project-4 coming-soon">
                         <div class="project-img">
-                          <img src="images/ericwang-thumbnail.jpeg" alt="Porject thumbnail">
+                          <img src="images/ericwang-thumbnail.jpeg" alt="Eric Wang project thumbnail - coming soon" loading="lazy">
                           <div class="c-s">
                             coming soon
                           </div>
@@ -344,7 +396,7 @@ We start by understanding your flow, then craft simple systems that feel natural
                         <div class="project-info">
                           <h5>Eric wang</h5>
                           <p>
-                            <span><img src="images/star.svg"></span>
+                            <span><img src="images/star.svg" alt="star icon"></span>
                             lifestle creator
                           </p>
                         </div>
@@ -359,16 +411,16 @@ We start by understanding your flow, then craft simple systems that feel natural
                 <div class="project-row project-row2">
 
 
-                  <a class="project-btn" href="project/sara.html">
+                  <a class="project-btn" href="project/sara.html" aria-label="View Sara Finance project">
 
                     <div class="project project-2">
                         <div class="project-img">
-                          <img src="images/sara-thumbnail.png" alt="Porject thumbnail">
+                          <img src="images/sara-thumbnail.png" alt="Sara Finance project thumbnail" loading="lazy">
                         </div>
                         <div class="project-info">
                           <h5>sara finance</h5>
                           <p>
-                            <span><img src="images/star.svg"></span>
+                            <span><img src="images/star.svg" alt="star icon"></span>
                             finance creator
                           </p>
                         </div>
@@ -378,7 +430,7 @@ We start by understanding your flow, then craft simple systems that feel natural
 
                       <div class="project project-5">
                         <div class="project-img">
-                          <img src="images/nicole-thumbnai.jpg" alt="Porject thumbnail">
+                          <img src="images/nicole-thumbnai.jpg" alt="Move with Nicole project thumbnail - coming soon" loading="lazy">
                           <div class="c-s">
                             coming soon
                           </div>
@@ -386,7 +438,7 @@ We start by understanding your flow, then craft simple systems that feel natural
                         <div class="project-info">
                           <h5>Move with nicole</h5>
                           <p>
-                            <span><img src="images/star.svg"></span>
+                            <span><img src="images/star.svg" alt="star icon"></span>
                             Fitness youtuber
                           </p>
                         </div>
@@ -398,7 +450,7 @@ We start by understanding your flow, then craft simple systems that feel natural
 
                     <div class="project project-3">
                         <div class="project-img">
-                          <img src="images/jack-thumbnail.webp" alt="Porject thumbnail">
+                          <img src="images/jack-thumbnail.webp" alt="Jack in the Books project thumbnail - coming soon" loading="lazy">
                           <div class="c-s">
                             coming soon
                           </div>
@@ -406,7 +458,7 @@ We start by understanding your flow, then craft simple systems that feel natural
                         <div class="project-info">
                           <h5>Jack in the Books</h5>
                           <p>
-                            <span><img src="images/star.svg"></span>
+                            <span><img src="images/star.svg" alt="star icon"></span>
                             book review channel
                           </p>
                         </div>
@@ -432,12 +484,12 @@ We start by understanding your flow, then craft simple systems that feel natural
 
           
 <div class="pricing-section" style="margin-bottom: 100px;">
-      <section class="pricing" id="pricing">
+      <section class="pricing" id="pricing" role="region" aria-labelledby="pricing-heading">
 
         <div class="pricing-content">
-        <h1>
+        <h2 id="pricing-heading">
             Pick the Best Plan for <br> Results.
-        </h1>
+        </h2>
         <p>
             We collaborate with a limited number of clients to ensure top-quality results.
         </p>
@@ -445,19 +497,19 @@ We start by understanding your flow, then craft simple systems that feel natural
 
         <div class="package-container">
 
-          <div class="pricing-card starter">
+          <div class="pricing-card starter" role="article" aria-labelledby="starter-plan">
                     <div class="price-header">
-                     <h2>(Starter)</h2>
+                     <h3 id="starter-plan">(Starter)</h3>
                     <p class="description">Perfect For Students Starting Their Journey To Get Organized</p>
                     </div>
                     <div class="price">
-                      <h1>₹199<span>(one-time)</span></h1>
+                      <div class="price-amount">₹199<span>(one-time)</span></div>
                      
-                        <a class="primary-button" href="https://calendly.com/ruv-versico/30min">Get started</a>                  
+                        <a class="primary-button" href="https://calendly.com/ruv-versico/30min" aria-label="Get started with Starter plan">Get started</a>                  
                     </div>
                     <hr>
                     <div class="features">
-                      <h3>Here's What You Get</h3>
+                      <h4>Here's What You Get</h4>
                       <ul>
                         <li>Minimal Daily Planner (To-Do + Time Blocks).</li>
                         <li>Habit Tracker To Stay Consistent</li>
@@ -471,19 +523,19 @@ We start by understanding your flow, then craft simple systems that feel natural
                    
                   </div>
 
-                  <div class="pricing-card essential">
+                  <div class="pricing-card essential" role="article" aria-labelledby="essential-plan">
                     <div class="price-header">
-                        <h2>(Essential)</h2>
+                        <h3 id="essential-plan">(Essential)</h3>
                         <p class="description"> If You’re Ready For Daily Structure And Academic Flow</p>
                     </div>
                     <div class="price">
-                        <h1> ₹399<span>(one-time)</span></h1>
+                        <div class="price-amount">₹399<span>(one-time)</span></div>
                        
-                        <a class="primary-button" href="https://calendly.com/ruv-versico/30min">Get started</a>                  
+                        <a class="primary-button" href="https://calendly.com/ruv-versico/30min" aria-label="Get started with Essential plan">Get started</a>                  
                     </div>
                     <hr>
                     <div class="features">
-                        <h3>Everything from Starter, PLUS</h3>
+                        <h4>Everything from Starter, PLUS</h4>
                         <ul>
                             <li>Full Daily OS: Routine, Reflection, Focus Modes</li>
                             <li>Academic Tracker (Subjects, Exams, GPA)</li>
@@ -497,19 +549,19 @@ We start by understanding your flow, then craft simple systems that feel natural
                    
                 </div>
 
-                  <div class="pricing-card premium">
+                  <div class="pricing-card premium" role="article" aria-labelledby="premium-plan">
                     <div class="price-header">
-                        <h2>(Premium)</h2>
+                        <h3 id="premium-plan">(Premium)</h3>
                         <p class="description">For Students Who Want Full Control Over Study, Life & Career</p>
                     </div>
                     <div class="price">
-                        <h1> ₹799 <span>(one-time)</span></h1>
+                        <div class="price-amount">₹799<span>(one-time)</span></div>
                        
-                        <a class="primary-button" href="https://calendly.com/ruv-versico/30min">Get started</a>                  
+                        <a class="primary-button" href="https://calendly.com/ruv-versico/30min" aria-label="Get started with Premium plan">Get started</a>                  
                     </div>
                     <hr>
                     <div class="features">
-                        <h3>Everything from Essential, PLUS</h3>
+                        <h4>Everything from Essential, PLUS</h4>
                         <ul>
                             <li>Career Toolkit: Internships, Resume, Job Apps</li>
                             <li>Scholarship & Competition Tracker.</li>
@@ -598,69 +650,69 @@ We start by understanding your flow, then craft simple systems that feel natural
 
 
 
-      <section id="faq" class="faq-section">
+      <section id="faq" class="faq-section" role="region" aria-labelledby="faq-heading">
 
         <div class="faq-head">
-            <h1>
+            <h2 id="faq-heading">
                 Got any questions? We've <br> got answers.
-            </h1>
+            </h2>
         </div>
 
-        <div class="faq-filter-container">
-        <div class="filter-buttons">
-          <button style="background-color: #F5BE81;" class="filter-btn filter-general" data-category="general" disabled>General</button>
-<button style="background-color: #EECBF2;" class="filter-btn filter-starter-plan" data-category="starter-plan" disabled>starter-plan</button>
-<button style="background-color: #C3B9F9;" class="filter-btn filter-essential-plan" data-category="essential-plan" disabled>essential-plan</button>
-<button style="background-color: #CE775D;" class="filter-btn filter-technical-questions" data-category="technical-questions" disabled>technical-questions</button>
-<button style="background-color: #A5AF73;" class="filter-btn filter-pricing-payment" data-category="pricing-payment" disabled>pricing-payment</button>
+        <div class="faq-filter-container" role="tablist" aria-label="FAQ categories">
+        <div class="filter-buttons" role="group">
+          <button style="background-color: #F5BE81;" class="filter-btn filter-general active" data-category="general" role="tab" aria-selected="true" aria-controls="faq-container">General</button>
+<button style="background-color: #EECBF2;" class="filter-btn filter-starter-plan" data-category="starter-plan" role="tab" aria-selected="false" aria-controls="faq-container">Starter Plan</button>
+<button style="background-color: #C3B9F9;" class="filter-btn filter-essential-plan" data-category="essential-plan" role="tab" aria-selected="false" aria-controls="faq-container">Essential Plan</button>
+<button style="background-color: #CE775D;" class="filter-btn filter-technical-questions" data-category="technical-questions" role="tab" aria-selected="false" aria-controls="faq-container">Technical Questions</button>
+<button style="background-color: #A5AF73;" class="filter-btn filter-pricing-payment" data-category="pricing-payment" role="tab" aria-selected="false" aria-controls="faq-container">Pricing & Payment</button>
         </div>            
         </div>
-        <div id="faq-container">
+        <div id="faq-container" role="tabpanel" aria-live="polite">
             <!-- FAQ items will be added here by JavaScript -->
         </div>
     </section>
 
- <footer>
-  <div class="contact-section">
+ <footer role="contentinfo">
+  <div class="contact-section" role="region" aria-labelledby="contact-heading">
     <div class="contact-container">
       <div class="contact-content">
         <div class="contact-left">
-          <h1 class="contact-title">
+          <h2 class="contact-title" id="contact-heading">
             LET'S<br>
             GET IN<br>
             TOUCH
-          </h1>
-          <div class="contact-decoration">
+          </h2>
+          <div class="contact-decoration" aria-hidden="true">
             <div class="contact-circle"></div>
             <div class="contact-line"></div>
           </div>
         </div>
         
         <div class="contact-right">
-          <form action="https://formspree.io/f/xpwrggrk" method="POST" class="contact-form">
+          <form action="https://formspree.io/f/xpwrggrk" method="POST" class="contact-form" aria-label="Contact form">
             <div class="form-row">
               <div class="form-group full-width">
-                <input type="text" name="name" placeholder="FULL NAME" required>
+                <input type="text" name="name" placeholder="FULL NAME" required aria-label="Full name">
               </div>
             </div>
             
             <div class="form-row">
               <div class="form-group half-width">
-                <input type="email" name="email" placeholder="EMAIL" required>
+                <input type="email" name="email" placeholder="EMAIL" required aria-label="Email address">
               </div>
               <div class="form-group half-width">
-                <input type="tel" name="phone" placeholder="PHONE">
+                <input type="tel" name="phone" placeholder="PHONE" aria-label="Phone number">
               </div>
             </div>
             
             <div class="form-row">
               <div class="form-group full-width">
-                <textarea name="message" placeholder="MESSAGE" rows="4" required></textarea>
+                <textarea name="message" placeholder="MESSAGE" rows="4" required aria-label="Your message"></textarea>
               </div>
             </div>
             
             <div class="form-submit">
-              <button type="submit" class="submit-btn">
+              <button type="submit" class="submit-btn" aria-label="Send message">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -685,7 +737,7 @@ We start by understanding your flow, then craft simple systems that feel natural
     </div>
   
   <!-- Design credit in bottom right -->
-  <div class="design-credit" style="position: absolute; bottom: 10px; right: 20px; font-size: 10px; color: #666; text-transform: none;">
+  <div class="design-credit" style="position: absolute; bottom: 10px; right: 20px; font-size: 10px; color: #666; text-transform: none;" aria-hidden="true">
    
   </div>
 </footer>
@@ -698,17 +750,49 @@ We start by understanding your flow, then craft simple systems that feel natural
 
 
     
-    <script src="js/locomotive-scroll.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="js/gsap.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/locomotive-scroll.js" defer></script>
+    <script src="https://unpkg.com/split-type" defer></script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
 
-    <script type="module" src="js/index.js"></script>
-    <script type="module" src="js/animation.js"></script>
+    <script type="module" src="js/index.js" defer></script>
+    <script type="module" src="js/animation.js" defer></script>
    
-<style>
-  .service-card img { display: none !important; }
-</style>
+    <!-- Performance optimization styles -->
+    <style>
+      .service-card img { display: none !important; }
+      
+      /* Smooth scroll behavior */
+      html { scroll-behavior: smooth; }
+      
+      /* Screen reader only class */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      
+      /* Focus styles for accessibility */
+      *:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+      }
+      
+      /* Reduced motion support */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
 
 
 
