@@ -1259,3 +1259,6 @@ padding-bottom: 180px;
   padding-bottom: 12 !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
