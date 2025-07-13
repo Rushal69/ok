@@ -222,9 +222,9 @@ function initSplitTextAnimation() {
         splitTypes.forEach((char, i) => {
             const bg = char.dataset.bgColor;
             const fg = char.dataset.fgColor;
-            const text = new SplitType(char, { types: 'char' });
+            const text = new SplitType(char, { types: 'words' });
 
-            tl.fromTo(text.chars,
+            tl.fromTo(text.words,
                 { color: bg, opacity: 0.5 },
                 { color: fg, opacity: 1, duration: 0.3, stagger: 0.02, ease: 'power2.out' },
                i === 0 ? 0 : ">=1"
