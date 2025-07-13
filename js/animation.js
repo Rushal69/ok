@@ -816,3 +816,25 @@ function initPricingAnimation() {
     }, "-=0.3");
   }
 }
+// ✅ Locomotive Scroll init
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
+});
+
+// ✅ Anchor click smooth scroll using Locomotive
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      scroll.scrollTo(targetElement, {
+        offset: 0,
+        duration: 1000,
+        easing: [0.25, 0.0, 0.35, 1.0]
+      });
+    }
+  });
+});
