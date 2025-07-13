@@ -118,11 +118,6 @@ const faqs = [
 ];
 
 export default faqs;
-// ✅ Locomotive Scroll init
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
-});
 
 // ✅ Anchor click smooth scroll using Locomotive
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
