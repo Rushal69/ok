@@ -708,6 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPersonalizedPackage();
   initFooterAnimation();
   initPricingAnimation();
+  initFAQAnimation();
 });
 
 // Footer Animation
@@ -771,6 +772,50 @@ function initFooterAnimation() {
       scale: 0.8,
       stagger: 0.1,
       ease: "back.out(1.7)"
+    }, "-=0.4");
+  }
+}
+
+// FAQ Section Animation
+function initFAQAnimation() {
+  const faqSection = document.querySelector('#faq');
+  const faqHeading = document.querySelector('.faq-head h1');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  if (faqSection && faqHeading) {
+    // Create timeline for FAQ animation
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: faqSection,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scroller: ".scroller",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    // Animate FAQ elements
+    tl.from(faqHeading, {
+      duration: 1.2,
+      y: 100,
+      opacity: 0,
+      ease: "power3.out"
+    })
+    .from(filterButtons, {
+      duration: 0.8,
+      y: 50,
+      opacity: 0,
+      scale: 0.9,
+      stagger: 0.1,
+      ease: "back.out(1.7)"
+    }, "-=0.6")
+    .from(faqItems, {
+      duration: 1,
+      y: 80,
+      opacity: 0,
+      stagger: 0.15,
+      ease: "power3.out"
     }, "-=0.4");
   }
 }
