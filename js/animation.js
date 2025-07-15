@@ -196,28 +196,7 @@ function initScrollAndTrigger() {
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
 
-    // Handle smooth scrolling for anchor links
-    function handleSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute("href");
-                const target = document.querySelector(targetId);
-                
-                if (target && locoScroll) {
-                    // Use Locomotive Scroll's scrollTo method for smooth scrolling
-                    locoScroll.scrollTo(target, {
-                        offset: 0,
-                        duration: 1200,
-                        easing: [0.25, 0.0, 0.35, 1.0]
-                    });
-                }
-            });
-        });
-    }
-
-    // Initialize smooth scrolling after a short delay to ensure everything is loaded
-    setTimeout(handleSmoothScroll, 100);
+    
 
     return locoScroll;
 }
