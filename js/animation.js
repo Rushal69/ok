@@ -323,38 +323,7 @@ function initMarquee(locoScroll) {
   }
 }
 
-// Approach Section Animation
-function initApproachAnimation() {
-  const approachText1 = document.querySelector('.approach-text-1');
-  const approachText2 = document.querySelector('.approach-text-2');
 
-  if (approachText1 && approachText2) {
-    // Create timeline for approach animation
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.approach',
-        start: 'top 75%',
-        end: 'bottom 25%',
-        scroller: ".scroller",
-        toggleActions: "play none none reverse"
-      }
-    });
-
-    // Animate approach text elements
-    tl.from(approachText1, {
-      duration: 1,
-      y: 60,
-      opacity: 0,
-      ease: "power3.out"
-    })
-    .from(approachText2, {
-      duration: 1,
-      y: 60,
-      opacity: 0,
-      ease: "power3.out"
-    }, "-=0.6");
-  }
-}
 
 
 
@@ -739,7 +708,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPersonalizedPackage();
   initFooterAnimation();
   initPricingAnimation();
-  initApproachAnimation();
 });
 
 // Footer Animation

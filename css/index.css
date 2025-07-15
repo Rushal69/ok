@@ -1,12 +1,5 @@
 
-.approach-text-1.animate-in,
-.approach-text-2.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-.approach-text-2 {
-  transition-delay: 0.2s;
 
 
 
@@ -301,15 +294,7 @@ line-height: 1.5;
 .approach-content{
   max-width: 940px;
   padding-left: 8px;
-}
 
-/* Approach Animation Styles */
-.approach-text-1,
-.approach-text-2 {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
 }
 
 
