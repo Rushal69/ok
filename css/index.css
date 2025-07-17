@@ -628,7 +628,7 @@ line-height: 1.5;
 
 .book-section {
   background-color: var(--black);
-  padding: 120px 0;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
@@ -725,7 +725,7 @@ line-height: 1.5;
 
 @media (max-width: 900px) {
   .book-section {
-    padding: 80px 0;
+    padding: 40px 0;
   }
   
   .book-container {
@@ -757,7 +757,7 @@ line-height: 1.5;
 
 @media (max-width: 600px) {
   .book-section {
-    padding: 60px 0;
+    padding: 30px 0;
   }
   
   .book-content {
@@ -794,7 +794,8 @@ line-height: 1.5;
 .pricing{
   background-color: var(--black);
   height: auto;
-  padding: 100px 0;
+  padding: 60px 0;
+  margin-top: -40px;
 }
 
 .pricing-content{
