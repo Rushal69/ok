@@ -707,10 +707,11 @@ line-height: 1.5;
 }
 
 .book-btn:hover {
-  background-color: var(--white-gray);
+  background-color: #000000; /* or just 'black' */
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
+
 
 /* Responsive Design for Book Section */
 @media (max-width: 1200px) {
