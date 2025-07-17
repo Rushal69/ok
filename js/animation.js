@@ -708,6 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPersonalizedPackage();
   initFooterAnimation();
   initPricingAnimation();
+  initBookAnimation();
   initFAQAnimation();
 });
 
@@ -773,6 +774,87 @@ function initFooterAnimation() {
       stagger: 0.1,
       ease: "back.out(1.7)"
     }, "-=0.4");
+  }
+}
+
+// Book Section Animation with Pin Effect
+function initBookAnimation() {
+  const bookSection = document.querySelector('.book-section');
+  const bookImage = document.querySelector('.book-image');
+  const bookText = document.querySelector('.book-text');
+  const bookTitle = document.querySelector('.book-text h1');
+  const bookDescription = document.querySelector('.book-text p');
+  const bookPrice = document.querySelector('.book-price');
+  const bookBtn = document.querySelector('.book-btn');
+
+  if (bookSection && bookImage && bookText) {
+    // Pin the book section during scroll
+    ScrollTrigger.create({
+      trigger: bookSection,
+      start: "top top",
+      end: "bottom bottom",
+      pin: true,
+      pinSpacing: false,
+      scroller: ".scroller"
+    });
+
+    // Animate book elements on scroll into view
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: bookSection,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scroller: ".scroller",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    // Stagger animation for book elements
+    tl.from(bookImage, {
+      duration: 1.2,
+      x: -100,
+      opacity: 0,
+      scale: 0.9,
+      ease: "power3.out"
+    })
+    .from(bookTitle, {
+      duration: 1,
+      y: 80,
+      opacity: 0,
+      ease: "power3.out"
+    }, "-=0.8")
+    .from(bookDescription, {
+      duration: 1,
+      y: 60,
+      opacity: 0,
+      ease: "power2.out"
+    }, "-=0.6")
+    .from(bookPrice, {
+      duration: 0.8,
+      y: 40,
+      opacity: 0,
+      ease: "power2.out"
+    }, "-=0.4")
+    .from(bookBtn, {
+      duration: 0.8,
+      y: 40,
+      opacity: 0,
+      scale: 0.9,
+      ease: "back.out(1.7)"
+    }, "-=0.2");
+
+    // Parallax effect for book image during scroll
+    gsap.to(bookImage, {
+      yPercent: -20,
+      ease: "none",
+      scrollTrigger: {
+        trigger: bookSection,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1,
+        scroller: ".scroller"
+      }
+    });
   }
 }
 
