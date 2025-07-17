@@ -403,7 +403,7 @@ img{
 
 .submit-btn:hover {
   transform: scale(1.1);
-  background-color:#000000;
+  background-color:#333333;
 }
 
 .contact-info {
