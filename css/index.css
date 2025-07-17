@@ -677,7 +677,7 @@ line-height: 1.5;
 
 .book-text p {
   font-size: 18px;
-  color: var(--white-gray);
+  color: #ffffff; /* or simply 'white' */
   line-height: 1.6;
   margin-bottom: 32px;
 }
