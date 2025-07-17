@@ -794,7 +794,7 @@ function initBookAnimation() {
       start: "top top",
       end: "bottom bottom",
       pin: true,
-      pinSpacing: false,
+      pinSpacing: true,
       scroller: ".scroller"
     });
 
