@@ -3,6 +3,8 @@
 
 
 
+
+
 .hero{
   height: 100vh;
   width: 100%;
@@ -631,13 +633,14 @@ line-height: 1.5;
   padding: 60px 0;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .book-container {
   max-width: 1680px;
   width: 90%;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -707,7 +710,7 @@ line-height: 1.5;
 }
 
 .book-btn:hover {
-  background-color: #000000; /* or just 'black' */
+  background-color: var(--white-gray);
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
 }
@@ -722,6 +725,11 @@ line-height: 1.5;
   .book-image img {
     height: 500px;
   }
+  
+  .book-container {
+    min-height: auto;
+    height: auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -730,6 +738,7 @@ line-height: 1.5;
   }
   
   .book-container {
+    min-height: auto;
     height: auto;
   }
   
@@ -796,7 +805,7 @@ line-height: 1.5;
   background-color: var(--black);
   height: auto;
   padding: 60px 0;
-  margin-top: -40px;
+  margin-top: 0;
 }
 
 .pricing-content{
@@ -1242,8 +1251,8 @@ hr {
 
   padding: 80px 0px;
   padding-top: 0px;
-background-color: var(--black);
-padding-bottom: 180px;
+  background-color: var(--black);
+  padding-bottom: 180px;
 }
 
 .faq-section h1{
@@ -1293,6 +1302,7 @@ padding-bottom: 180px;
 
 .filter-buttons button.active {
   opacity: 1;
+  transform: scale(1.05);
 }
 
 .faq-item {
@@ -1347,6 +1357,11 @@ padding-bottom: 180px;
   cursor: pointer;
   margin-bottom: 8px;
   color: var(--white);
+  user-select: none;
+}
+
+.faq-item.active .toggle-btn {
+  transform: rotate(45deg);
 }
 
 
@@ -1417,7 +1432,6 @@ padding-bottom: 180px;
 
 
 .faq-section {
-  margin-bottom: 12 !important;
-  padding-bottom: 12 !important;
+  margin-bottom: 0;
+  padding-bottom: 120px;
 }
-
