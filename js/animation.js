@@ -16,10 +16,16 @@ const closeButton = document.querySelector('.close-btn');
 
 function showNav() {
   navContainer.style.display = 'block';
+  setTimeout(() => {
+    navContainer.classList.add('show');
+  }, 10);
 }
 
 function hideNav() {
-  navContainer.style.display = 'none';
+  navContainer.classList.remove('show');
+  setTimeout(() => {
+    navContainer.style.display = 'none';
+  }, 300);
 }
 
 menuButton.addEventListener('click', showNav);
@@ -55,6 +61,7 @@ function circleChaptaKaro() {
     // Only show the cursor on the first movement
     if (minicircle.style.display === "none") {
       minicircle.style.display = "block";  // Show cursor
+      minicircle.style.opacity = "1";
     }
 
     clearTimeout(timeout); // Clear timeout if it exists
@@ -73,12 +80,12 @@ function circleChaptaKaro() {
   });
 
   // Hide cursor when it leaves the viewport
-  window.addEventListener("mouseout", function () {
+  document.addEventListener("mouseleave", function () {
     minicircle.style.opacity = "0";
   });
 
   // Show cursor when it re-enters the viewport
-  window.addEventListener("mouseover", function () {
+  document.addEventListener("mouseenter", function () {
     minicircle.style.opacity = "1";
   });
 }
@@ -436,18 +443,25 @@ function initPersonalizedPackage() {
       faqHeader.addEventListener('click', () => {
         const currentAnswer = faqHeader.nextElementSibling;
         const currentToggleBtn = toggleBtn;
+        const isActive = faqItem.classList.contains('active');
   
-        document.querySelectorAll('.faq-item p').forEach(answer => {
-          if (answer !== currentAnswer) {
+        // Close all other FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            item.classList.remove('active');
+            const answer = item.querySelector('p');
+            const btn = item.querySelector('.toggle-btn');
             answer.style.maxHeight = '0';
-            answer.previousElementSibling.querySelector('.toggle-btn').textContent = '+';
+            btn.textContent = '+';
           }
         });
   
-        if (currentAnswer.style.maxHeight === '0px' || !currentAnswer.style.maxHeight) {
+        if (!isActive) {
+          faqItem.classList.add('active');
           currentAnswer.style.maxHeight = currentAnswer.scrollHeight + 'px'; // Expand
           currentToggleBtn.textContent = '-';
         } else {
+          faqItem.classList.remove('active');
           currentAnswer.style.maxHeight = '0px'; // Collapse
           currentToggleBtn.textContent = '+';
         }
@@ -792,7 +806,7 @@ function initBookAnimation() {
     ScrollTrigger.create({
       trigger: bookSection,
       start: "top top",
-      end: "bottom bottom",
+      end: "+=100%",
       pin: true,
       pinSpacing: true,
       scroller: ".scroller"
@@ -803,7 +817,7 @@ function initBookAnimation() {
       scrollTrigger: {
         trigger: bookSection,
         start: 'top 80%',
-        end: 'bottom 20%',
+        end: 'center center',
         scroller: ".scroller",
         toggleActions: "play none none reverse"
       }
@@ -842,19 +856,6 @@ function initBookAnimation() {
       scale: 0.9,
       ease: "back.out(1.7)"
     }, "-=0.2");
-
-    // Parallax effect for book image during scroll
-    gsap.to(bookImage, {
-      yPercent: -20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: bookSection,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1,
-        scroller: ".scroller"
-      }
-    });
   }
 }
 
